@@ -18,7 +18,8 @@
 
 위치 기준 반경 300M 내의 공적마스크 판매 약국 정보 제공
 
-![메인화면](https://user-images.githubusercontent.com/56620330/78424149-63d87400-76a6-11ea-9bf7-1cfe9bf52df9.jpg)
+![메인화면](https://user-images.githubusercontent.com/56620330/78454314-428d7d00-76d2-11ea-9c6f-e48bed16baf9.jpg)
+
 
 검색한 주소 위치 및 터치한 맵 위치를 기준으로 반경 300M 내의 공적마스크 판매처 정보를 제공 합니다
 
