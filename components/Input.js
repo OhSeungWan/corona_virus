@@ -1,9 +1,41 @@
 import React from 'react'
-import { Text,TouchableOpacity ,StyleSheet, Button, View, TextInput } from 'react-native';
+import { Text,TouchableOpacity ,StyleSheet, Button, View, TextInput,SectionList } from 'react-native';
 import * as service from './ajax'
 import {connect} from 'react-redux'
 import {ChageMarkerPositon ,SetMedicals} from '../store/actions/finger'
+const DATA = [
+    {
+      title: "검색 반경을 선택하세요 ",
+      data: ["100", "200", "300"]
+    }
+  ];
+  const onCheck = (e) => {
+    
+  }
+  const Item = ({ title }) => (
+    <View style={Style.item}>
+      <TouchableOpacity 
+          onPress={onCheck({title})}
+          style={{backgroundColor:'#32a852',margin:3,borderRadius:3}} 
+          value = {title}>
+            <Text>check</Text>
+      </TouchableOpacity>
+      <Text style={Style.title}>{title}</Text>
+    </View>
+  );
 const Style = StyleSheet.create({
+    item:{
+        alignSelf: "center", 
+        flexDirection: "row"
+    },
+    title: {
+        alignContent:"center",
+        fontSize:20
+    },
+    header: {
+        fontSize: 32,
+        backgroundColor: "#fff"
+      },
     input: {
     
     flexDirection : 'row',
@@ -72,8 +104,13 @@ class Input extends React.Component{
         })
         .then(this.getMedicalData)
         .then(function (result) {
-           
-            dispatch(SetMedicals(result.stores))
+            if(result.stores.length>5){
+                let res =[]
+               for(let index = 0 ; index <5 ; index++){
+                 res.push(result.stores[index])
+               } 
+               dispatch(SetMedicals(res))
+              }else{ dispatch(SetMedicals(result.stores))}
         })
 
       }
@@ -90,16 +127,31 @@ class Input extends React.Component{
         const {input} = this.state
         const {handleChange,handleSearch} = this
         return(
-            <View style = {Style.input}>
-            <TextInput style={Style.input_text}
-            value ={input} 
-            onChange = {handleChange}
-            placeholder = "지역을 검색하세요"
-            ></TextInput>
-            <TouchableOpacity style={Style.button}
-            onPress ={handleSearch}>
-            <Text>Serch</Text> 
-            </TouchableOpacity>
+            <View >
+               <View style = {Style.input}>  
+                <TextInput 
+                    style={Style.input_text}
+                    value ={input} 
+                    onChange = {handleChange}
+                    placeholder = "지역을 검색하세요"
+                    >
+                </TextInput>
+                <TouchableOpacity 
+                    style={Style.button}
+                    onPress ={handleSearch}>
+                <Text>Serch</Text> 
+                </TouchableOpacity>
+            </View> 
+          
+            <SectionList
+                sections={DATA}
+                keyExtractor={(item, index) => item + index}
+                renderItem={({ item }) => <Item title={item} />}
+                renderSectionHeader={(
+                    { section: { title } }) =>
+                     (<Text style={Style.header}>{title}</Text>)
+                    }
+            />
         </View>
         )
     }

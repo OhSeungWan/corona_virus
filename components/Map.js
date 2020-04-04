@@ -28,7 +28,14 @@ class Map extends React.Component{
       resolve(res)
     }).then(this.getMedicalData)
     .then(function (result) {
-      dispatch(SetMedicals(result.stores))
+      if(result.stores.length>5){
+        let res =[]
+       for(let index = 0 ; index <5 ; index++){
+         res.push(result.stores[index])
+       } 
+       dispatch(SetMedicals(res))
+      }else{dispatch(SetMedicals(result.stores))}
+      
     })
   }
 

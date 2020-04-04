@@ -9,6 +9,6 @@ export function getXyByAddress(address) {
 }
 
 export function getMedicalByXy(lat,lng){
-    return axios.get('https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat='+lat+'&lng='+lng+'&m=300')
+    return axios.get('https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat='+lat+'&lng='+lng+'&m=200')
     .then(res => res.data)
 }
