@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "pjt",
-    "slug": "pjt",
+    "name": "coronaMask",
+    "slug": "coronamask",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "공적마스크 위치정보 제공 서비스",
+    "githubUrl": "https://github.com/OhSeungWan/corona_virus"
   }
 }

@@ -53,8 +53,8 @@ class Map extends React.Component{
       const  Region ={
             latitude: ''+latitude,
             longitude: ''+longitude,
-            latitudeDelta: 0.01,
-            longitudeDelta: 0.01,
+            latitudeDelta: 0.006,// 검색시 줌 배율
+            longitudeDelta: 0.006,
         }
        const {handleMapPress} = this
         
