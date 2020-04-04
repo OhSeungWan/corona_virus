@@ -33,12 +33,12 @@ class Input extends React.Component{
         input :'',
         lat : '',
         lng: '',
-        search
+        search : ''
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.search !== nextProps.search;
-      }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return this.props.search !== nextProps.search;
+    //   }
 
     handleChange =(e)=>{
         this.setState({
