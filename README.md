@@ -1,5 +1,6 @@
 # [공적 마스크 위치 정보 제공 어플]
 
+
 ## Table of Contents
 
 - [공적 마스크 위치 정보 제공 어플](#%ec%8b%9d%eb%8b%b9-%eb%a6%ac%eb%b7%b0-sns)
@@ -17,7 +18,7 @@
 
 위치 기준 반경 300M 내의 공적마스크 판매 약국 정보 제공
 
-![공적마스크](C:\Users\USER\Desktop\공적마스크.jpg)
+![공적마스크](https://user-images.githubusercontent.com/56620330/78424036-c0875f00-76a5-11ea-87aa-12494723f978.jpg)
 
 검색한 주소 위치 및 터치한 맵 위치를 기준으로 반경 300M 내의 공적마스크 판매처 정보를 제공 합니다
 
@@ -95,7 +96,7 @@ javaScript
 
 ## Stack
 
-![기술스택](C:\Users\USER\Desktop\기술스택.png)
+![기술스택](https://user-images.githubusercontent.com/56620330/78424038-c1b88c00-76a5-11ea-8896-fd2c138b0782.png)
 
 ## license
 
