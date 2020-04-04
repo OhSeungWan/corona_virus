@@ -46,8 +46,7 @@ export default class App extends React.Component {
        <View style={styles.container}>
         <Header/>
         <Input value = {input} onCreate = {handleCreate} onChange={handleChange}/>
-        {/* <ListTodo todos = {todos} search={search}/> */}
-        <Result isMapPress={isMapPress} store={store} search={search} isclick={isclick}/>  
+        {/* <Result isMapPress={isMapPress} store={store} search={search} isclick={isclick}/>   */}
         <Map  isMapPress={isMapPress} search={search} />  
        </View>
       </Provider>
